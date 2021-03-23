@@ -18,7 +18,35 @@ struct DrawView: UIViewRepresentable {
         //rightHairBun （髮髻）(circle)
         path.move(to: CGPoint(x: 283, y: 92))
         path.addArc(withCenter: CGPoint(x: 283, y: 92), radius: 45, startAngle: Degree * 0, endAngle: Degree * 360, clockwise: true)
+        
+        var drawLayer = CAShapeLayer()
+        drawLayer.path = path.cgPath
+        drawLayer.fillColor = UIColor.black.cgColor
+        drawLayer.strokeColor = drawLayer.fillColor
+        drawLayer.lineWidth = 1
+        view.layer.addSublayer(drawLayer)
+
+        
+        //leftHairPin（髮簪）
+        path = UIBezierPath()
+        path.move(to: CGPoint(x: 114, y: 98))
+        path.addQuadCurve(to: CGPoint(x: 104, y: 92
+        ), controlPoint: CGPoint(x: 118, y: 88))
+        path.addQuadCurve(to: CGPoint(x: 48, y: 149
+        ), controlPoint: CGPoint(x: 65, y: 118))
+        path.addQuadCurve(to: CGPoint(x: 60, y: 156
+        ), controlPoint: CGPoint(x: 46, y: 163))
+        
+        drawLayer = CAShapeLayer()
+        drawLayer.path = path.cgPath
+        drawLayer.fillColor = CGColor(red: 230/255, green: 0, blue: 10/255, alpha: 1)
+        drawLayer.strokeColor = drawLayer.fillColor
+        drawLayer.lineWidth = 1
+        view.layer.addSublayer(drawLayer)
+        
+        
         //cuteHair (頭髮)
+        path = UIBezierPath()
         path.move(to: CGPoint(x: 228, y: 92))
         path.addQuadCurve(to: CGPoint(x: 115, y: 97), controlPoint: CGPoint(x: 165, y: 75))
         path.addQuadCurve(to: CGPoint(x: 56, y: 157), controlPoint: CGPoint(x: 70, y: 120))
@@ -33,14 +61,14 @@ struct DrawView: UIViewRepresentable {
         path.addQuadCurve(to: CGPoint(x: 286, y: 156
         ), controlPoint: CGPoint(x: 295, y: 188))
         
-        var drawLayer = CAShapeLayer()
+        drawLayer = CAShapeLayer()
         drawLayer.path = path.cgPath
         drawLayer.fillColor = UIColor.black.cgColor
         drawLayer.strokeColor = drawLayer.fillColor
         drawLayer.lineWidth = 1
         view.layer.addSublayer(drawLayer)
-
         
+
         //cuteFace (臉部)
         path = UIBezierPath()
         path.move(to: CGPoint(x: 261, y: 162))
@@ -148,16 +176,8 @@ struct DrawView: UIViewRepresentable {
         view.layer.addSublayer(drawLayer)
         
         
-        //leftHairPin（髮簪）
-        path = UIBezierPath()
-        path.move(to: CGPoint(x: 114, y: 98))
-        path.addQuadCurve(to: CGPoint(x: 104, y: 92
-        ), controlPoint: CGPoint(x: 118, y: 88))
-        path.addQuadCurve(to: CGPoint(x: 48, y: 151
-        ), controlPoint: CGPoint(x: 65, y: 118))
-        path.addQuadCurve(to: CGPoint(x: 60, y: 156
-        ), controlPoint: CGPoint(x: 46, y: 163))
         //rightHairPin（髮簪）
+        path = UIBezierPath()
         path.move(to: CGPoint(x: 277, y: 152))
         path.addQuadCurve(to: CGPoint(x: 290, y: 140
         ), controlPoint: CGPoint(x: 303, y: 168))
