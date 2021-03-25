@@ -128,14 +128,15 @@ struct DrawView: UIViewRepresentable {
         path.addQuadCurve(to: CGPoint(x: 241, y: 178
         ), controlPoint: CGPoint(x: 248, y: 178))
         path.addLine(to: CGPoint(x: 180, y: 200))
-        //cuteMouthe (嘴)
+        //cuteMouthe (嘴) update
         path.move(to: CGPoint(x:140, y: 233))
         path.addQuadCurve(to: CGPoint(x: 134, y: 233
         ), controlPoint: CGPoint(x: 137, y: 229))
-        path.addCurve(to: CGPoint(x: 172, y: 233), controlPoint1: CGPoint(x: 137, y: 265), controlPoint2: CGPoint(x: 168, y: 265))
+        path.addCurve(to: CGPoint(x: 172, y: 233), controlPoint1: CGPoint(x: 137, y: 261), controlPoint2: CGPoint(x: 168, y: 261))
         path.addQuadCurve(to: CGPoint(x: 166, y: 232
         ), controlPoint: CGPoint(x: 170, y: 228))
-        path.addCurve(to: CGPoint(x: 140, y: 233), controlPoint1: CGPoint(x: 165, y: 258), controlPoint2: CGPoint(x: 140, y: 258))
+        path.addCurve(to: CGPoint(x: 140, y: 233), controlPoint1: CGPoint(x: 165, y: 254), controlPoint2: CGPoint(x: 140, y: 254))
+        
         
         drawLayer = CAShapeLayer()
         drawLayer.path = path.cgPath
@@ -197,11 +198,13 @@ struct DrawView: UIViewRepresentable {
         path.addCurve(to: CGPoint(x: 227, y: 319), controlPoint1: CGPoint(x: 227, y: 301), controlPoint2: CGPoint(x: 225, y: 316))
         path.addCurve(to: CGPoint(x: 265, y: 315), controlPoint1: CGPoint(x: 235, y: 327), controlPoint2: CGPoint(x: 256, y: 324))
         path.addCurve(to: CGPoint(x: 240, y: 264), controlPoint1: CGPoint(x: 270, y: 296), controlPoint2: CGPoint(x: 251, y: 269))
-        //cuteTail (尾巴)
+        //cuteTail (尾巴) update
         path.move(to: CGPoint(x:276, y: 258))
         path.addCurve(to: CGPoint(x: 300, y: 296), controlPoint1: CGPoint(x: 279, y: 272), controlPoint2: CGPoint(x: 290, y: 290))
         path.addCurve(to: CGPoint(x: 330, y: 205), controlPoint1: CGPoint(x: 323, y: 278), controlPoint2: CGPoint(x: 340, y: 240))
-        path.addCurve(to: CGPoint(x: 292, y: 218), controlPoint1: CGPoint(x: 320, y: 201), controlPoint2: CGPoint(x: 301, y: 210))
+        path.addCurve(to: CGPoint(x: 293, y: 218), controlPoint1: CGPoint(x: 320, y: 201), controlPoint2: CGPoint(x: 301, y: 210))
+        path.addQuadCurve(to: CGPoint(x: 276, y: 258
+        ), controlPoint: CGPoint(x: 292, y: 241))
         
         drawLayer = CAShapeLayer()
         drawLayer.path = path.cgPath
